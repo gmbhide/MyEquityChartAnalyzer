@@ -6,7 +6,7 @@
     <x:Property Name="in_strScannerFor" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1145,3346</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1145,3215</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -117,43 +117,44 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetTradingViewScreenshots" sap:VirtualizedContainerService.HintSize="824,3281" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetTradingViewScreenshots" sap:VirtualizedContainerService.HintSize="824,3150" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="782,3216" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="782,3085" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence sap:VirtualizedContainerService.HintSize="744,2965" sap2010:WorkflowViewState.IdRef="Sequence_5">
+        <Sequence sap:VirtualizedContainerService.HintSize="744,2834" sap2010:WorkflowViewState.IdRef="Sequence_5">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="702,2900" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="702,2769" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
             <ui:ForEachRow.Body>
               <ActivityAction x:TypeArguments="sd:DataRow">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="668,2713" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="668,2582" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Access Denied — TradingView India" sap:VirtualizedContainerService.HintSize="606,2625" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="b2d0b570-a022-4761-9986-f2b846f99a8d" Version="V2" WindowResize="Maximize">
+                  <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Access Denied — TradingView India" sap:VirtualizedContainerService.HintSize="606,2494" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="b2d0b570-a022-4761-9986-f2b846f99a8d" Version="V2" WindowResize="Maximize">
                     <uix:NApplicationCard.Body>
                       <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                         </ActivityAction.Argument>
-                        <Sequence sap:VirtualizedContainerService.HintSize="572,2385" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                        <Sequence sap:VirtualizedContainerService.HintSize="572,2254" sap2010:WorkflowViewState.IdRef="Sequence_6">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="ui:Image" Name="imgScreenShot" />
                             <Variable x:TypeArguments="x:Int32" Name="int_RenkoBrickSize" />
+                            <Variable x:TypeArguments="x:Decimal" Name="dec_RenkoBrickSize" />
                           </Sequence.Variables>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -178,58 +179,75 @@
                           </uix:NClick>
                           <Assign sap:VirtualizedContainerService.HintSize="530,114" sap2010:WorkflowViewState.IdRef="Assign_1">
                             <Assign.To>
-                              <OutArgument x:TypeArguments="x:Int32">
-                                <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">int_RenkoBrickSize</CSharpReference>
+                              <OutArgument x:TypeArguments="x:Decimal">
+                                <CSharpReference x:TypeArguments="x:Decimal" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">dec_RenkoBrickSize</CSharpReference>
                               </OutArgument>
                             </Assign.To>
                             <Assign.Value>
-                              <InArgument x:TypeArguments="x:Int32">
-                                <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">Convert.ToInt32(CurrentRow["Price"])/100</CSharpValue>
+                              <InArgument x:TypeArguments="x:Decimal">
+                                <CSharpValue x:TypeArguments="x:Decimal" sap2010:WorkflowViewState.IdRef="CSharpValue`1_23">Convert.ToDecimal(CurrentRow["Price"])/100</CSharpValue>
                               </InArgument>
                             </Assign.Value>
                           </Assign>
-                          <If sap:VirtualizedContainerService.HintSize="530,466" sap2010:WorkflowViewState.IdRef="If_1">
-                            <If.Condition>
-                              <InArgument x:TypeArguments="x:Boolean">
-                                <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_19">int_RenkoBrickSize==0</CSharpValue>
-                              </InArgument>
-                            </If.Condition>
-                            <If.Then>
-                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,193" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="530,251" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                            <ui:CommentOut.Body>
+                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,140" sap2010:WorkflowViewState.IdRef="Sequence_10">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_2">
-                                  <Assign.To>
-                                    <OutArgument x:TypeArguments="x:Int32">
-                                      <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">int_RenkoBrickSize</CSharpReference>
-                                    </OutArgument>
-                                  </Assign.To>
-                                  <Assign.Value>
-                                    <InArgument x:TypeArguments="x:Int32">1</InArgument>
-                                  </Assign.Value>
-                                </Assign>
+                                <If sap:VirtualizedContainerService.HintSize="374,75" sap2010:WorkflowViewState.IdRef="If_1">
+                                  <If.Condition>
+                                    <InArgument x:TypeArguments="x:Boolean">
+                                      <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_19">int_RenkoBrickSize==0</CSharpValue>
+                                    </InArgument>
+                                  </If.Condition>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <If.Then>
+                                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,193" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:Int32">
+                                            <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">int_RenkoBrickSize</CSharpReference>
+                                          </OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:Int32">1</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                    </Sequence>
+                                  </If.Then>
+                                  <If.Else>
+                                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </Sequence>
+                                  </If.Else>
+                                </If>
                               </Sequence>
-                            </If.Then>
-                            <If.Else>
-                              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,103" sap2010:WorkflowViewState.IdRef="Sequence_9">
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                              </Sequence>
-                            </If.Else>
-                          </If>
+                            </ui:CommentOut.Body>
+                          </ui:CommentOut>
                           <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '21'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="530,286" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="b2d0b570-a022-4761-9986-f2b846f99a8d" Version="V3">
                             <uix:NTypeInto.Target>
                               <uix:TargetAnchorable BrowserURL="https://in.tradingview.com/chart/Ncpei8Fb/?symbol=NSE%3AHDFCBANK" CVScreenId="0de25931-dc03-4a4a-ac9e-d1bc0568e199" CvElementArea="1059, 653, 154, 37" CvType="InputBox" DesignTimeRectangle="1064, 657, 120, 28" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'21'" FullSelectorArgument="&lt;webctrl name='number-input' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl name='number-input' tag='INPUT' type='text' class='input-RUSovanF size-small-RUSovanF with-end-slot-RUSovanF' aaname='' /&gt;" Guid="74f061d9-f3b9-4cd1-b8df-b325d4b418f9" InformativeScreenshot="b613ba3b7eabb394aa0e8562b5f5313d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='HDFCBANK 1,648.10 ▼ −4.58% Unnamed' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
                             </uix:NTypeInto.Target>
                             <uix:NTypeInto.Text>
                               <InArgument x:TypeArguments="x:String">
-                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">int_RenkoBrickSize.ToString()</CSharpValue>
+                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_21">dec_RenkoBrickSize.ToString()</CSharpValue>
                               </InArgument>
                             </uix:NTypeInto.Text>
                             <uix:NTypeInto.VerifyOptions>
@@ -267,63 +285,70 @@
                               </uix:VerifyExecutionOptions>
                             </uix:NClick.VerifyOptions>
                           </uix:NClick>
-                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="530,457" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="530,541" sap2010:WorkflowViewState.IdRef="CommentOut_1">
                             <ui:CommentOut.Body>
-                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,346" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                              <Sequence sap:VirtualizedContainerService.HintSize="492,430" sap2010:WorkflowViewState.IdRef="Sequence_11">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="374,122" sap2010:WorkflowViewState.IdRef="Delay_2" />
-                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'CANVAS'" sap:VirtualizedContainerService.HintSize="374,84" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b2d0b570-a022-4761-9986-f2b846f99a8d" Version="V3">
-                                  <uix:NClick.Target>
-                                    <uix:TargetAnchorable BrowserURL="https://in.tradingview.com/chart/Ncpei8Fb/?symbol=NSE%3AHDFCBANK" DesignTimeRectangle="68, 165, 1701, 769" DesignTimeScaleFactor="1" FriendlyName="'CANVAS'" FullSelectorArgument="&lt;webctrl aria-label='Chart for NSE:HDFCBANK, 1 day' tag='CANVAS' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='Chart for NSE:HDFCBANK, 1 day' tag='CANVAS' type='' class='' aaname='' /&gt;" Guid="fe84e1bf-3e63-4cf8-abb6-39ad741c417f" InformativeScreenshot="9ccf232523aacb02ae80157544185f7a.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='HDFCBANK 1,648.10 ▼ −4.58% Unnamed' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
-                                  </uix:NClick.Target>
-                                  <uix:NClick.VerifyOptions>
-                                    <uix:VerifyExecutionOptions DisplayName="Icon 'SVG'" Mode="Appears">
-                                      <uix:VerifyExecutionOptions.Retry>
-                                        <InArgument x:TypeArguments="x:Boolean" />
-                                      </uix:VerifyExecutionOptions.Retry>
-                                      <uix:VerifyExecutionOptions.Target>
-                                        <uix:TargetAnchorable BrowserURL="https://in.tradingview.com/chart/Ncpei8Fb/?symbol=NSE%3AHDFCBANK" CVScreenId="c5f4530d-eb2d-47e2-904a-d8368e22a3a0" CvElementArea="1698, 130, 26, 24" CvType="Icon" DesignTimeRectangle="1697, 128, 28, 28" DesignTimeScaleFactor="1" ElementType="Icon" FriendlyName="'SVG'" FullSelectorArgument="&lt;webctrl parentid='header-toolbar-properties' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='header-toolbar-properties' tag='svg' type='' class='' aaname='' /&gt;" Guid="16f4581d-8dcf-47c9-b427-850f81012ee5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFASURBVFhH7ZWtbkJBEIV5BwQajajGVqDrSaqrm2DxFUgeAFHHC5Ag+wJN6vowl3wkk0w2Z3bnNiUIVnzJZf72nP0Jk+lsPtyTLqAL6ALSAg6fx+H75zcFtWqGIiXgefUynM5fMqegdv36JnMlKQEMRITKKUzw4mkp856mgPfNdtSWGh+7/bVX5TxVATjgTDNOSujJ7EJVAA6UC4biEHEswrdaKOr3hALMgYqzsA3mN9/Krc0o455QQHSGUZxbr+4KtarekAJMucpFjv7SA1JA7RnVhnE0Kk5P9IxHHwHbrOLE6FHx2jNuXsLSrcVNBL/5jmpbzzgUAAy2hTy2qH+GZQ1E/Z6qAFDOMtBDr8p5mgJwEDmsEd2hkqYAGLsLWfeQEoATbnJWBLX/+ncMOOLSZci6h7SAW9EFdAGPLmA+XABVgNm5XuQ7zwAAAABJRU5ErkJggg==" InformativeScreenshot="cf56b24a7216485692c3a59222988370.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='HDFCBANK 1,648.10 ▼ −4.58% Unnamed' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
-                                      </uix:VerifyExecutionOptions.Target>
-                                      <uix:VerifyExecutionOptions.Timeout>
-                                        <InArgument x:TypeArguments="x:Double" />
-                                      </uix:VerifyExecutionOptions.Timeout>
-                                    </uix:VerifyExecutionOptions>
-                                  </uix:NClick.VerifyOptions>
+                                <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="450,122" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,243" sap2010:WorkflowViewState.IdRef="Sequence_7">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                </uix:NClick>
-                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Reset chart view'" sap:VirtualizedContainerService.HintSize="374,75" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b2d0b570-a022-4761-9986-f2b846f99a8d" Version="V3">
-                                  <uix:NClick.Target>
-                                    <uix:TargetAnchorable BrowserURL="https://in.tradingview.com/chart/Ncpei8Fb/?symbol=NSE%3AHDFCBANK" CVScreenId="b131651a-4f80-4580-bc4d-9fbd9ca8cf6e" CvTextArea="927, 347, 107, 13" CvTextArgument="Reset chart view" CvType="Text" DesignTimeRectangle="928, 346, 234, 16" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Reset chart view'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Reset chart view' tableRow='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Reset chart view' type='' tag='SPAN' class='label-GJX1EXhk' check:innerText='Reset chart view' /&gt;" Guid="5b34c3b4-5b62-4fee-9f71-23bcf8864f2b" InformativeScreenshot="38a5ebd543698606b870002898e58a79.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='HDFCBANK 1,648.10 ▼ −4.58% Unnamed' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
-                                  </uix:NClick.Target>
-                                  <uix:NClick.VerifyOptions>
-                                    <uix:VerifyExecutionOptions DisplayName="Icon 'SVG'" Mode="Appears">
-                                      <uix:VerifyExecutionOptions.Retry>
-                                        <InArgument x:TypeArguments="x:Boolean" />
-                                      </uix:VerifyExecutionOptions.Retry>
-                                      <uix:VerifyExecutionOptions.Target>
-                                        <uix:TargetAnchorable BrowserURL="https://in.tradingview.com/chart/Ncpei8Fb/?symbol=NSE%3AHDFCBANK" CVScreenId="c5f4530d-eb2d-47e2-904a-d8368e22a3a0" CvElementArea="1698, 130, 26, 24" CvType="Icon" DesignTimeRectangle="1697, 128, 28, 28" DesignTimeScaleFactor="1" ElementType="Icon" FriendlyName="'SVG'" FullSelectorArgument="&lt;webctrl parentid='header-toolbar-properties' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='header-toolbar-properties' tag='svg' type='' class='' aaname='' /&gt;" Guid="16f4581d-8dcf-47c9-b427-850f81012ee5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFASURBVFhH7ZWtbkJBEIV5BwQajajGVqDrSaqrm2DxFUgeAFHHC5Ag+wJN6vowl3wkk0w2Z3bnNiUIVnzJZf72nP0Jk+lsPtyTLqAL6ALSAg6fx+H75zcFtWqGIiXgefUynM5fMqegdv36JnMlKQEMRITKKUzw4mkp856mgPfNdtSWGh+7/bVX5TxVATjgTDNOSujJ7EJVAA6UC4biEHEswrdaKOr3hALMgYqzsA3mN9/Krc0o455QQHSGUZxbr+4KtarekAJMucpFjv7SA1JA7RnVhnE0Kk5P9IxHHwHbrOLE6FHx2jNuXsLSrcVNBL/5jmpbzzgUAAy2hTy2qH+GZQ1E/Z6qAFDOMtBDr8p5mgJwEDmsEd2hkqYAGLsLWfeQEoATbnJWBLX/+ncMOOLSZci6h7SAW9EFdAGPLmA+XABVgNm5XuQ7zwAAAABJRU5ErkJggg==" InformativeScreenshot="cf56b24a7216485692c3a59222988370.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='HDFCBANK 1,648.10 ▼ −4.58% Unnamed' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
-                                      </uix:VerifyExecutionOptions.Target>
-                                      <uix:VerifyExecutionOptions.Timeout>
-                                        <InArgument x:TypeArguments="x:Double" />
-                                      </uix:VerifyExecutionOptions.Timeout>
-                                    </uix:VerifyExecutionOptions>
-                                  </uix:NClick.VerifyOptions>
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                </uix:NClick>
+                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'CANVAS'" sap:VirtualizedContainerService.HintSize="388,57" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b2d0b570-a022-4761-9986-f2b846f99a8d" Version="V3">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://in.tradingview.com/chart/Ncpei8Fb/?symbol=NSE%3AHDFCBANK" DesignTimeRectangle="68, 165, 1701, 769" DesignTimeScaleFactor="1" FriendlyName="'CANVAS'" FullSelectorArgument="&lt;webctrl aria-label='Chart for NSE:HDFCBANK, 1 day' tag='CANVAS' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='Chart for NSE:HDFCBANK, 1 day' tag='CANVAS' type='' class='' aaname='' /&gt;" Guid="fe84e1bf-3e63-4cf8-abb6-39ad741c417f" InformativeScreenshot="9ccf232523aacb02ae80157544185f7a.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='HDFCBANK 1,648.10 ▼ −4.58% Unnamed' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                                    </uix:NClick.Target>
+                                    <uix:NClick.VerifyOptions>
+                                      <uix:VerifyExecutionOptions DisplayName="Icon 'SVG'" Mode="Appears">
+                                        <uix:VerifyExecutionOptions.Retry>
+                                          <InArgument x:TypeArguments="x:Boolean" />
+                                        </uix:VerifyExecutionOptions.Retry>
+                                        <uix:VerifyExecutionOptions.Target>
+                                          <uix:TargetAnchorable BrowserURL="https://in.tradingview.com/chart/Ncpei8Fb/?symbol=NSE%3AHDFCBANK" CVScreenId="c5f4530d-eb2d-47e2-904a-d8368e22a3a0" CvElementArea="1698, 130, 26, 24" CvType="Icon" DesignTimeRectangle="1697, 128, 28, 28" DesignTimeScaleFactor="1" ElementType="Icon" FriendlyName="'SVG'" FullSelectorArgument="&lt;webctrl parentid='header-toolbar-properties' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='header-toolbar-properties' tag='svg' type='' class='' aaname='' /&gt;" Guid="16f4581d-8dcf-47c9-b427-850f81012ee5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFASURBVFhH7ZWtbkJBEIV5BwQajajGVqDrSaqrm2DxFUgeAFHHC5Ag+wJN6vowl3wkk0w2Z3bnNiUIVnzJZf72nP0Jk+lsPtyTLqAL6ALSAg6fx+H75zcFtWqGIiXgefUynM5fMqegdv36JnMlKQEMRITKKUzw4mkp856mgPfNdtSWGh+7/bVX5TxVATjgTDNOSujJ7EJVAA6UC4biEHEswrdaKOr3hALMgYqzsA3mN9/Krc0o455QQHSGUZxbr+4KtarekAJMucpFjv7SA1JA7RnVhnE0Kk5P9IxHHwHbrOLE6FHx2jNuXsLSrcVNBL/5jmpbzzgUAAy2hTy2qH+GZQ1E/Z6qAFDOMtBDr8p5mgJwEDmsEd2hkqYAGLsLWfeQEoATbnJWBLX/+ncMOOLSZci6h7SAW9EFdAGPLmA+XABVgNm5XuQ7zwAAAABJRU5ErkJggg==" InformativeScreenshot="cf56b24a7216485692c3a59222988370.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='HDFCBANK 1,648.10 ▼ −4.58% Unnamed' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                        </uix:VerifyExecutionOptions.Target>
+                                        <uix:VerifyExecutionOptions.Timeout>
+                                          <InArgument x:TypeArguments="x:Double" />
+                                        </uix:VerifyExecutionOptions.Timeout>
+                                      </uix:VerifyExecutionOptions>
+                                    </uix:NClick.VerifyOptions>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NClick>
+                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Reset chart view'" sap:VirtualizedContainerService.HintSize="374,75" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b2d0b570-a022-4761-9986-f2b846f99a8d" Version="V3">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://in.tradingview.com/chart/Ncpei8Fb/?symbol=NSE%3AHDFCBANK" CVScreenId="b131651a-4f80-4580-bc4d-9fbd9ca8cf6e" CvTextArea="927, 347, 107, 13" CvTextArgument="Reset chart view" CvType="Text" DesignTimeRectangle="928, 346, 234, 16" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Reset chart view'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Reset chart view' tableRow='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Reset chart view' type='' tag='SPAN' class='label-GJX1EXhk' check:innerText='Reset chart view' /&gt;" Guid="5b34c3b4-5b62-4fee-9f71-23bcf8864f2b" InformativeScreenshot="38a5ebd543698606b870002898e58a79.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='HDFCBANK 1,648.10 ▼ −4.58% Unnamed' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                    </uix:NClick.Target>
+                                    <uix:NClick.VerifyOptions>
+                                      <uix:VerifyExecutionOptions DisplayName="Icon 'SVG'" Mode="Appears">
+                                        <uix:VerifyExecutionOptions.Retry>
+                                          <InArgument x:TypeArguments="x:Boolean" />
+                                        </uix:VerifyExecutionOptions.Retry>
+                                        <uix:VerifyExecutionOptions.Target>
+                                          <uix:TargetAnchorable BrowserURL="https://in.tradingview.com/chart/Ncpei8Fb/?symbol=NSE%3AHDFCBANK" CVScreenId="c5f4530d-eb2d-47e2-904a-d8368e22a3a0" CvElementArea="1698, 130, 26, 24" CvType="Icon" DesignTimeRectangle="1697, 128, 28, 28" DesignTimeScaleFactor="1" ElementType="Icon" FriendlyName="'SVG'" FullSelectorArgument="&lt;webctrl parentid='header-toolbar-properties' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='header-toolbar-properties' tag='svg' type='' class='' aaname='' /&gt;" Guid="16f4581d-8dcf-47c9-b427-850f81012ee5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFASURBVFhH7ZWtbkJBEIV5BwQajajGVqDrSaqrm2DxFUgeAFHHC5Ag+wJN6vowl3wkk0w2Z3bnNiUIVnzJZf72nP0Jk+lsPtyTLqAL6ALSAg6fx+H75zcFtWqGIiXgefUynM5fMqegdv36JnMlKQEMRITKKUzw4mkp856mgPfNdtSWGh+7/bVX5TxVATjgTDNOSujJ7EJVAA6UC4biEHEswrdaKOr3hALMgYqzsA3mN9/Krc0o455QQHSGUZxbr+4KtarekAJMucpFjv7SA1JA7RnVhnE0Kk5P9IxHHwHbrOLE6FHx2jNuXsLSrcVNBL/5jmpbzzgUAAy2hTy2qH+GZQ1E/Z6qAFDOMtBDr8p5mgJwEDmsEd2hkqYAGLsLWfeQEoATbnJWBLX/+ncMOOLSZci6h7SAW9EFdAGPLmA+XABVgNm5XuQ7zwAAAABJRU5ErkJggg==" InformativeScreenshot="cf56b24a7216485692c3a59222988370.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='HDFCBANK 1,648.10 ▼ −4.58% Unnamed' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                        </uix:VerifyExecutionOptions.Target>
+                                        <uix:VerifyExecutionOptions.Timeout>
+                                          <InArgument x:TypeArguments="x:Double" />
+                                        </uix:VerifyExecutionOptions.Timeout>
+                                      </uix:VerifyExecutionOptions>
+                                    </uix:NClick.VerifyOptions>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NClick>
+                                </Sequence>
                               </Sequence>
                             </ui:CommentOut.Body>
                           </ui:CommentOut>
