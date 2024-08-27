@@ -42,7 +42,8 @@
     },
     "processOptions": {
       "ignoredFiles": [
-        "Operations/Database/InsertScanResult_Old.xaml"
+        "Operations/Database/InsertScanResult_Old.xaml",
+        "Operations/Database/UpdateScreenShotStatus.xaml"
       ]
     },
     "fileInfoCollection": [
