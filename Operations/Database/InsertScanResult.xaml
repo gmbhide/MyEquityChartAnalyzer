@@ -104,11 +104,11 @@
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strStockName" />
       <Variable x:TypeArguments="ui:DatabaseConnection" Name="dbConnection" />
-      <Variable x:TypeArguments="x:String" Default="MyEquityChartAnalyzer" Name="strInsertedBy" />
+      <Variable x:TypeArguments="x:String" Name="strInsertedBy" />
       <Variable x:TypeArguments="x:String" Name="strSymbol" />
       <Variable x:TypeArguments="x:Decimal" Name="decPerChange" />
       <Variable x:TypeArguments="x:Decimal" Name="decPrice" />
-      <Variable x:TypeArguments="x:Int32" Name="intVolume" />
+      <Variable x:TypeArguments="x:Int64" Name="intVolume" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -200,13 +200,13 @@
                         </ui:AssignOperation>
                         <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
                           <ui:AssignOperation.To>
-                            <OutArgument x:TypeArguments="x:Int32">
-                              <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">intVolume</CSharpReference>
+                            <OutArgument x:TypeArguments="x:Int64">
+                              <CSharpReference x:TypeArguments="x:Int64" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">intVolume</CSharpReference>
                             </OutArgument>
                           </ui:AssignOperation.To>
                           <ui:AssignOperation.Value>
-                            <InArgument x:TypeArguments="x:Int32">
-                              <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">Convert.ToInt32(CurrentRow["Volume"].ToString().Replace(",",""))</CSharpValue>
+                            <InArgument x:TypeArguments="x:Int64">
+                              <CSharpValue x:TypeArguments="x:Int64" sap2010:WorkflowViewState.IdRef="CSharpValue`1_23">Convert.ToInt64(CurrentRow["Volume"].ToString().Replace(",",""))</CSharpValue>
                             </InArgument>
                           </ui:AssignOperation.Value>
                         </ui:AssignOperation>
